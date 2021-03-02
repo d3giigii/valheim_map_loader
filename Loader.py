@@ -16,11 +16,12 @@ REM NOTE: You need to make sure the ports 2456-2458 is being forwarded to your s
 valheim_server -nographics -batchmode -name {} -port {} -world {} -password {}
 """
 
-print("Valheim Map Loader")
+num_maps = map_dict.__len__() + 1
 
+print("Valheim Map Loader")
 while(True):
     print("\nSelect from the following menu.")
-    for i in range(1, map_dict.__len__()+1):
+    for i in range(1, num_maps):
         print("\t{}. Load {}.".format(i, map_dict[i]))
     print("\t0. Exit application")
 
